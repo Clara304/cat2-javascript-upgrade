@@ -76,3 +76,31 @@ addMealBtn.addEventListener("click", function () {
     mealInput.value = "";
 
 });
+// Review Form Validation
+
+const reviewForm = document.getElementById("reviewForm");
+const reviewMessage = document.getElementById("reviewMessage");
+
+reviewForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (name === "" || email === "" || message === "") {
+
+        reviewMessage.textContent = "Please fill in all the required fields.";
+        reviewMessage.style.color = "red";
+
+    } else {
+
+        reviewMessage.textContent = "Thank you! Your review has been submitted successfully.";
+        reviewMessage.style.color = "green";
+
+        reviewForm.reset();
+
+    }
+
+});

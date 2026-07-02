@@ -199,6 +199,10 @@ button:hover{
 #mealList button{
     margin-left:10px;
 }
+#reviewMessage{
+    margin-top:15px;
+    font-weight:bold;
+}
 
 footer{
     background-color:#8B0000;
