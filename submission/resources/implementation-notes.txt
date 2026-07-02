@@ -1,0 +1,22 @@
+Implementation Notes
+
+1. Loop-rendered Dynamic Content
+- The Grilled Meats menu is stored in a JavaScript array of objects.
+- The menu items are displayed using the forEach() loop instead of hardcoding them in HTML.
+
+2. Add and Remove Items
+- Users can add their favourite meals to a list.
+- Each meal has a Remove button that deletes it from the list using remove().
+
+3. Form Validation
+- The review form uses event.preventDefault() to stop the page from refreshing.
+- JavaScript checks that the required fields are filled in.
+- A success or error message is displayed using textContent.
+
+4. localStorage
+- The customer's name is saved using localStorage.
+- The saved name is automatically restored when the page is refreshed.
+
+5. Banner Click-to-Reveal
+- Clicking the banner image shows or hides a welcome message.
+- This feature uses classList.toggle().
