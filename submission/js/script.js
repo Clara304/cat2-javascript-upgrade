@@ -117,3 +117,13 @@ if (localStorage.getItem("customerName")) {
 nameInput.addEventListener("input", function () {
     localStorage.setItem("customerName", nameInput.value);
 });
+
+// Banner Click-to-Reveal
+
+const bannerImage = document.getElementById("bannerImage");
+const bannerCaption = document.getElementById("bannerCaption");
+
+bannerImage.addEventListener("click", function () {
+    bannerCaption.classList.toggle("show");
+    bannerCaption.classList.toggle("hidden");
+});
