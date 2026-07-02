@@ -104,3 +104,16 @@ reviewForm.addEventListener("submit", function(event) {
     }
 
 });
+// Save the user's name
+
+const nameInput = document.getElementById("name");
+
+// Load the saved name when the page opens
+if (localStorage.getItem("customerName")) {
+    nameInput.value = localStorage.getItem("customerName");
+}
+
+// Save the name whenever the user types
+nameInput.addEventListener("input", function () {
+    localStorage.setItem("customerName", nameInput.value);
+});
