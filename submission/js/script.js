@@ -42,3 +42,37 @@ grilledMeats.forEach(function(item) {
     grilledMenu.appendChild(menuItem);
 
 });
+// Favorite Meals
+
+const mealInput = document.getElementById("mealInput");
+const addMealBtn = document.getElementById("addMealBtn");
+const mealList = document.getElementById("mealList");
+
+addMealBtn.addEventListener("click", function () {
+
+    const mealName = mealInput.value.trim();
+
+    if (mealName === "") {
+        alert("Please enter a meal name.");
+        return;
+    }
+
+    const li = document.createElement("li");
+
+    li.textContent = mealName + " ";
+
+    const removeButton = document.createElement("button");
+
+    removeButton.textContent = "Remove";
+
+    removeButton.addEventListener("click", function () {
+        li.remove();
+    });
+
+    li.appendChild(removeButton);
+
+    mealList.appendChild(li);
+
+    mealInput.value = "";
+
+});

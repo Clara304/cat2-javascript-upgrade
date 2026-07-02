@@ -184,6 +184,21 @@ button:hover{
     color:#8B0000;
     text-decoration:none;
 }
+#favorites{
+    padding:40px;
+}
+
+#mealList{
+    margin-top:20px;
+}
+
+#mealList li{
+    margin-bottom:10px;
+}
+
+#mealList button{
+    margin-left:10px;
+}
 
 footer{
     background-color:#8B0000;
